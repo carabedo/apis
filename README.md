@@ -14,7 +14,13 @@ def lambda_handler(event, context):
 ```
 
 
+## CloudWatch
 
+AWS ofrece un sistema para centralizar todos los logs, nos conviene setear nuestra lambda para poder visualizar logs. Para esto vamos a permisos y creamos un nuevo rol (ponemos un nombre como rolMILAMBDA para no olvidarnos). Luego debemos asignarle permisos full cloudwatch logs.
+
+Ahora cuando probemos o ejecutemos nuestra lambda, quedaran guardado nuestros logs.
+
+## DynamoDB
 
 # apis
 
