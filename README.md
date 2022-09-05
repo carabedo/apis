@@ -22,6 +22,26 @@ Ahora cuando probemos o ejecutemos nuestra lambda, quedaran guardado nuestros lo
 
 ## DynamoDB
 
+
+## Cron jobs
+
+Queremos que este requests y update de la tabla se realice de manera automatica cada 15 minutos. Para esto vamos a usar un trigger (un disparador), vamos al dashboard de nuestra lambda y vamos a `+ add trigger`.
+
+Seleccionamos:
+
+```
+EventBridge (CloudWatch Events)
+```
+
+Y luego configuramos `Create a new rule` y le asignamos un nombre:
+
+- Rule name: `ELNOMBREQUEQUIERASPARAELTRIGGER`
+
+Y por ultimo definimos cada cuanto se va a ejecutar nuestra lambda, como ejemplo uso 15 minutos:
+
+- Schedule expression: `rate(15 minutes)`
+
+
 # apis
 
 
