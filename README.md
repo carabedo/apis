@@ -33,7 +33,7 @@ Seleccionamos:
 EventBridge (CloudWatch Events)
 ```
 
-Y luego configuramos `Create a new rule` y le asignamos un nombre:
+Y luego configuramos **Create a new rule** y le asignamos un nombre:
 
 - Rule name: `ELNOMBREQUEQUIERASPARAELTRIGGER`
 
