@@ -1,3 +1,21 @@
+# AWS lambdas (python)
+
+Creemos nuestra primera lambda, una que solo va a mostrar un mensaje:
+
+```python
+import json
+
+def lambda_handler(event, context):
+    # TODO implement
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Hola ya cree una lambda!')
+    }
+```
+
+
+
+
 # apis
 
 
