@@ -18,8 +18,9 @@ https://gist.github.com/unoexperto/80694ccaed6dadc304ad5b8196cbbd2c
 ### instalar apktool
 
 https://ibotpeaches.github.io/Apktool/install/
+
 * Download apktool from https://ibotpeaches.github.io/Apktool/
-* Unpack apk file: `java -jar /home/expert/work/tools/apktool.jar d net.flixster.android-9.1.3@APK4Fun.com.apk`
+* Unpack apk file: `apktool d app.apk`
 * Modify AndroidManifest.xml by adding `android:networkSecurityConfig="@xml/network_security_config"` attribute to `application` element.
 * Create file /res/xml/network_security_config.xml with following content:
 ```
@@ -33,7 +34,7 @@ https://ibotpeaches.github.io/Apktool/install/
     </base-config>
 </network-security-config>
 ```
-* Build patched apk: `java -jar /home/expert/work/tools/apktool.jar b flixster -o flixster_patched.apk`
+* Build patched apk: `apktool b app -o app_patched.apk`
 * If you see error 'android:localeConfig in Manifest' see https://github.com/iBotPeaches/Apktool/issues/2756#issuecomment-1059370741
 * If you see followint error try running `java -jar /home/expert/work/tools/apktool.jar empty-framework-dir --force` or run `b` command with parameter `--use-aapt2`
 ```
@@ -42,7 +43,8 @@ brut.androlib.AndrolibException: brut.common.BrutException: could not exec (exit
 ```
 * ~~Generate keys to sign apk: `keytool -genkey -alias keys -keystore keys -keyalg RSA -keysize 2048 -validity 10000 # password`~~
 * ~~Sign apk file: `jarsigner -verbose -keystore keys /home/expert/Downloads/lancet/flixster_patched.apk keys`~~
-* Old method of signing with jarsigner produces apk that new version of Android refuses to install. Please use: `java -jar uber-apk-signer.jar --apks /path/to/apks` from [here](https://github.com/unoexperto/uber-apk-signer).
+* Old method of signing with jarsigner produces apk that new version of Android refuses to install.
+Please use: `java -jar uber-apk-signer.jar --apks /path/to/apks` from [here](https://github.com/unoexperto/uber-apk-signer).
 * If necessary convert apk to jar for further analysis: `d2j-dex2jar.sh net.flixster.android-9.1.3@APK4Fun.com.apk`
 * To find what cyphers suites are supported by remote server calls: `nmap --script ssl-enum-ciphers -p 443 youtubei.googleapis.com` or `sslscan youtubei.googleapis.com`
 * To check what cypher suites your client supports query https://www.howsmyssl.com/a/check
