@@ -1,68 +1,20 @@
-# AWS lambdas (python)
+# Guia completa de APIS
 
-Creemos nuestra primera lambda, una que solo va a mostrar un mensaje:
+## indice:
+- hackeando apps
+- creando una api en aws
+    - lambdas
+    - cronjobs
+    - dynamodb
+- ejemplos
 
-```python
-import json
-
-def lambda_handler(event, context):
-    # TODO implement
-    return {
-        'statusCode': 200,
-        'body': json.dumps('Hola ya cree una lambda!')
-    }
-```
-
-
-## CloudWatch
-
-AWS ofrece un sistema para centralizar todos los logs, nos conviene setear nuestra lambda para poder visualizar logs. Para esto vamos a permisos y creamos un nuevo rol (ponemos un nombre como rolMILAMBDA para no olvidarnos). Luego debemos asignarle permisos full cloudwatch logs.
-
-Ahora cuando probemos o ejecutemos nuestra lambda, quedaran guardado nuestros logs.
-
-## DynamoDB
-
-
-## Cron jobs
-
-Queremos que este requests y update de la tabla se realice de manera automatica cada 15 minutos. Para esto vamos a usar un trigger (un disparador), vamos al dashboard de nuestra lambda y vamos a `+ add trigger`.
-
-Seleccionamos:
-
-```
-EventBridge (CloudWatch Events)
-```
-
-Y luego configuramos **Create a new rule** y le asignamos un nombre:
-
-- Rule name: `ELNOMBREQUEQUIERASPARAELTRIGGER`
-
-Y por ultimo definimos cada cuanto se va a ejecutar nuestra lambda, como ejemplo uso 15 minutos:
-
-- Schedule expression: `rate(15 minutes)`
-
-
-# apis
-
-
-## jumbo
-
-```
-https://7pyngmccwa.execute-api.us-east-1.amazonaws.com/default/apitest?q=chocolate&n=5
-``` 
-
-
-Cantidad maxima de articulos 50.
-
-
-## api_es
-
-```
-https://fep3c4yva3.execute-api.us-east-1.amazonaws.com/default/api_es?q=chocolate&n=5
-``` 
 ## parcheando apks 
 
+
+Hackeando apps de android, podemos obtener los endopoints de algunas apis privadas:
+
 https://gist.github.com/unoexperto/80694ccaed6dadc304ad5b8196cbbd2c
+
 ### instalar apktool
 
 https://ibotpeaches.github.io/Apktool/install/
@@ -95,7 +47,75 @@ brut.androlib.AndrolibException: brut.common.BrutException: could not exec (exit
 * To find what cyphers suites are supported by remote server calls: `nmap --script ssl-enum-ciphers -p 443 youtubei.googleapis.com` or `sslscan youtubei.googleapis.com`
 * To check what cypher suites your client supports query https://www.howsmyssl.com/a/check
 
-### 
+## crear una api
+
+Una manera sencilla es usar AWS lambdas
+
+## AWS lambdas (python)
+
+Creemos nuestra primera lambda, una que solo va a mostrar un mensaje:
+
+```python
+import json
+
+def lambda_handler(event, context):
+    # TODO implement
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Hola ya cree una lambda!')
+    }
+```
+
+
+### CloudWatch
+
+AWS ofrece un sistema para centralizar todos los logs, nos conviene setear nuestra lambda para poder visualizar logs. Para esto vamos a permisos y creamos un nuevo rol (ponemos un nombre como rolMILAMBDA para no olvidarnos). Luego debemos asignarle permisos full cloudwatch logs.
+
+Ahora cuando probemos o ejecutemos nuestra lambda, quedaran guardado nuestros logs.
+
+### DynamoDB
+
+Podemos usar esta base de datos para alamanacenar data scrapeada
+
+
+### Cron jobs
+
+Queremos que este requests y update de la tabla se realice de manera automatica cada 15 minutos. Para esto vamos a usar un trigger (un disparador), vamos al dashboard de nuestra lambda y vamos a `+ add trigger`.
+
+Seleccionamos:
+
+```
+EventBridge (CloudWatch Events)
+```
+
+Y luego configuramos **Create a new rule** y le asignamos un nombre:
+
+- Rule name: `ELNOMBREQUEQUIERASPARAELTRIGGER`
+
+Y por ultimo definimos cada cuanto se va a ejecutar nuestra lambda, como ejemplo uso 15 minutos:
+
+- Schedule expression: `rate(15 minutes)`
+
+
+## Ejemplos de  apis:
+
+
+## jumbo
+
+```
+https://7pyngmccwa.execute-api.us-east-1.amazonaws.com/default/apitest?q=chocolate&n=5
+``` 
+
+
+Cantidad maxima de articulos 50.
+
+
+## api_es
+
+```
+https://fep3c4yva3.execute-api.us-east-1.amazonaws.com/default/api_es?q=chocolate&n=5
+``` 
+
 ## trenes
 
 ```java
