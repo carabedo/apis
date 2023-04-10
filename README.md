@@ -60,6 +60,9 @@ Cantidad maxima de articulos 50.
 ```
 https://fep3c4yva3.execute-api.us-east-1.amazonaws.com/default/api_es?q=chocolate&n=5
 ``` 
+## parcheando apks 
+
+https://gist.github.com/unoexperto/80694ccaed6dadc304ad5b8196cbbd2c
 
 ## trenes
 
