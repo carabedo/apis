@@ -35,6 +35,7 @@ https://ibotpeaches.github.io/Apktool/install/
 </network-security-config>
 ```
 * Build patched apk: `apktool b app -o app_patched.apk`
+* error `Resource is not public` see https://github.com/iBotPeaches/Apktool/issues/810
 * If you see error 'android:localeConfig in Manifest' see https://github.com/iBotPeaches/Apktool/issues/2756#issuecomment-1059370741
 * If you see followint error try running `java -jar /home/expert/work/tools/apktool.jar empty-framework-dir --force` or run `b` command with parameter `--use-aapt2`
 ```
