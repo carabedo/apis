@@ -50,7 +50,7 @@ Please use: `java -jar uber-apk-signer.jar --apks /path/to/apks` from [here](htt
 * To find what cyphers suites are supported by remote server calls: `nmap --script ssl-enum-ciphers -p 443 youtubei.googleapis.com` or `sslscan youtubei.googleapis.com`
 * To check what cypher suites your client supports query https://www.howsmyssl.com/a/check
 
-## crear una api
+## Crear una API
 
 Una manera sencilla es usar AWS lambdas
 
