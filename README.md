@@ -6,7 +6,7 @@
     - lambdas
     - cronjobs
     - dynamodb
-- [ejemplos](https://github.com/carabedo/apis#ejemplos-de--apis)
+- [ejemplos](#ejemplos-de--apis)
 
 ## parcheando apks 
 
