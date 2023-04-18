@@ -1,15 +1,14 @@
 # Guia completa de APIS
 
-## indice:
-- hackeando apps
+
+- [hackeando apps](#ejemplos-de--apis)
 - creando una api en aws
     - lambdas
     - cronjobs
     - dynamodb
 - [ejemplos](#ejemplos-de--apis)
 
-## parcheando apks 
-
+## Hackeando APKS (android apps) 
 
 Hackeando apps de android, podemos obtener los endopoints de algunas apis privadas:
 
