@@ -1,7 +1,7 @@
 # Guia completa de APIS
 
 
-- [hackeando apps](#hackeando-apks-android-apps))
+- [hackeando apps](#hackeando-apks-android-apps)
 - creando una api en aws
     - lambdas
     - cronjobs
@@ -53,7 +53,7 @@ Please use: `java -jar uber-apk-signer.jar --apks /path/to/apks` from [here](htt
 
 Una manera sencilla es usar AWS lambdas
 
-## AWS lambdas (python)
+### AWS lambdas (python)
 
 Creemos nuestra primera lambda, una que solo va a mostrar un mensaje:
 
