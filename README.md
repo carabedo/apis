@@ -10,9 +10,9 @@
 
 ## Hackeando APKS (android apps) 
 
-Hackeando apps de android, podemos obtener los endopoints de algunas apis privadas:
+Hackeando apps de android podemos obtener los endopoints de algunas apis privadas. Primero necesitamos bajar el `apk` de la aplicacion, luego debemos modificar la applicacion para poder interceptar y decofidicar los requests que realiza.
 
-https://gist.github.com/unoexperto/80694ccaed6dadc304ad5b8196cbbd2c
+[ejemplo](https://gist.github.com/unoexperto/80694ccaed6dadc304ad5b8196cbbd2c)
 
 ### instalar apktool
 
@@ -49,9 +49,15 @@ Please use: `java -jar uber-apk-signer.jar --apks /path/to/apks` from [here](htt
 * To find what cyphers suites are supported by remote server calls: `nmap --script ssl-enum-ciphers -p 443 youtubei.googleapis.com` or `sslscan youtubei.googleapis.com`
 * To check what cypher suites your client supports query https://www.howsmyssl.com/a/check
 
+Luego de tener la version parcheada y firmada, la instalamos en nuetro celular
+
+## PCAPdroid
+
+Usaremos esta aplicacion de android para interceptar los pedidos, con esto podremos encontrar los endpoints de los recursos que nos interesan y el metodo de autentificacion si es que lo tiene.
+
 ## Crear una API
 
-Una manera sencilla es usar AWS lambdas
+Luego de tener los endpoints de la api, vamos crear nuestra propia API para. Una manera sencilla es usar AWS lambdas
 
 ### AWS lambdas (python)
 
