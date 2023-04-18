@@ -103,21 +103,11 @@ Y por ultimo definimos cada cuanto se va a ejecutar nuestra lambda, como ejemplo
 ## Ejemplos de  apis:
 
 
-## jumbo
-
+## Comparativa precios (Dia% , Carrefour, ChangoMas)
 ```
-https://7pyngmccwa.execute-api.us-east-1.amazonaws.com/default/apitest?q=chocolate&n=5
+https://7pyngmccwa.execute-api.us-east-1.amazonaws.com/default/apitest?q=chocolate
 ``` 
 
-
-Cantidad maxima de articulos 50.
-
-
-## api_es
-
-```
-https://fep3c4yva3.execute-api.us-east-1.amazonaws.com/default/api_es?q=chocolate&n=5
-``` 
 
 ## trenes
 
