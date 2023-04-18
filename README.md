@@ -103,13 +103,13 @@ Y por ultimo definimos cada cuanto se va a ejecutar nuestra lambda, como ejemplo
 ## Ejemplos de  apis:
 
 
-## Comparativa precios (Dia% , Carrefour, ChangoMas)
+### Comparativa precios (Dia% , Carrefour, ChangoMas)
 ```
 https://7pyngmccwa.execute-api.us-east-1.amazonaws.com/default/apitest?q=chocolate
 ``` 
 
 
-## trenes
+### trenes
 
 ```java
 
