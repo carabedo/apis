@@ -62,14 +62,15 @@ http://cuandosubo.sube.gob.ar/onebusaway-api-webapp/api/where/
 
 ## Comportamiento de la app:
 
-stops-for-location(lat,lon,latspan,lonspan)
-arrivals-and-departures-for-stop(stopId)
+`stops-for-location(lat,lon,latspan,lonspan)`
+
+`arrivals-and-departures-for-stop(stopId)`
 
 onmapclick:
-stops-for-route(routeId,includePolylines=true)
+`stops-for-route(routeId,includePolylines=true)`
 
 onbondiclick:
-trips-for-route(routeId)
+`trips-for-route(routeId)`
 
 ## Home
 
