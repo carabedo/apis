@@ -1,0 +1,9 @@
+#map { height: 500px; width: 500px; }
+
+.center-screen {
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+min-height: 100vh;
+}
