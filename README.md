@@ -98,6 +98,9 @@ Cuando queremos usar alguna libreria para nuestra lambda, vamos a ver que no est
 
 Agregamos la ARN que coincida con la version de python y la arquitectura, para la libreria que necesitamos.
 
+Por ejemplo, buscamos en esta [lista](https://api.klayers.cloud//api/v2/p3.9/layers/latest/us-east-1/html), la ARN para requests, notamos que en este caso mi lambda esta en `us-east-1`.
+
+
 ### CloudWatch
 
 AWS ofrece un sistema para centralizar todos los logs, nos conviene setear nuestra lambda para poder visualizar logs. Para esto vamos a permisos y creamos un nuevo rol (ponemos un nombre como rolMILAMBDA para no olvidarnos). Luego debemos asignarle permisos full cloudwatch logs.
