@@ -34,7 +34,7 @@ function getBondis(lat,lon,radio,map){
     radio=0.01
 
     url_base='https://6kqhkztw2umh633pg5yxo47h3y0toiyo.lambda-url.us-east-1.on.aws/?'
-    url=url_base+'lat='+lat.toString()+'&lon='+lon.toString()
+    url=url_base+'lat='+lat+'&lon='+lon
 
     getBondisNear(url)
 
