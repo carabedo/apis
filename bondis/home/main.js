@@ -30,8 +30,7 @@ map.on('locationfound', onLocationFound);
 
 function getBondis(lat,lon,radio,map){
 
-    lat=-34.654756208531126
-    lon= -58.34646820091482
+    
     radio=0.01
 
     url_base='https://6kqhkztw2umh633pg5yxo47h3y0toiyo.lambda-url.us-east-1.on.aws/?'
