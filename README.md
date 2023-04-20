@@ -91,7 +91,12 @@ def lambda_handler(event, context):
         'body': json.dumps('Hola ya cree y modifique una lambda!')
     }
 ```
+### Layers 
 
+Cuando queremos usar alguna libreria para nuestra lambda, vamos a ver que no esta instalada, para instalarlas debemos usar
+[Layers](https://github.com/keithrozario/Klayers)
+
+Agregamos la ARN que coincida con la version de python y la arquitectura, para la libreria que necesitamos.
 
 ### CloudWatch
 
