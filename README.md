@@ -62,8 +62,6 @@ Luego de tener los endpoints de la api, vamos crear nuestra propia API para. Una
 ### AWS lambdas (python)
 
 
-
-
 Creemos nuestra primera lambda:
 
 
@@ -75,7 +73,7 @@ Creemos nuestra primera lambda:
 - autorizacion: NONE
 - habilitar CORS: ✔️
 
-Si hacemos un requests GET a la [url](https://kz2zmo73y7zxtre5vp7avoukcu0vvjgz.lambda-url.us-east-1.on.aws/) de la funcion, deberiamos ver el siguiente mensaje:
+Si hacemos un requests GET o entramos con el navegador a la [url](https://kz2zmo73y7zxtre5vp7avoukcu0vvjgz.lambda-url.us-east-1.on.aws/) de la funcion, deberiamos ver el siguiente mensaje:
 
 ```
 'Hello from Lambda!'
@@ -90,7 +88,7 @@ def lambda_handler(event, context):
     # TODO implement
     return {
         'statusCode': 200,
-        'body': json.dumps('Hola ya cree una lambda!')
+        'body': json.dumps('Hola ya cree y modifique una lambda!')
     }
 ```
 
