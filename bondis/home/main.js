@@ -44,8 +44,8 @@ const getBondisNear = async (url) => {
       };
     const response = await fetch(url, requestOptions);
     const json = await response.json();
-    bondisNear = json[0]
-    rutaBondisNear=json[1]
+    let bondisNear = json[0]
+    let rutaBondisNear=json[1]
     for (let k in bondisNear) {
         let bondi = bondisNear[k]
         lat=bondi['status']['position']['lat']
@@ -65,10 +65,9 @@ const getBondisNear = async (url) => {
 
 
 
-function getBondis(lat,lon,radio,map){
+function getBondis(lat,lon,radio){
 
-    
-    radio=0.01
+
 
     url_base='https://6kqhkztw2umh633pg5yxo47h3y0toiyo.lambda-url.us-east-1.on.aws/?'
     url=url_base+'lat='+lat+'&lon='+lon
