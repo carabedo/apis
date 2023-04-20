@@ -1,5 +1,7 @@
 
 let bondisNear
+let rutaBondisNear
+
 
 var map = L.map('map').setView([-34.6037,-58.3816], 12);
 
@@ -44,20 +46,14 @@ const getBondisNear = async (url) => {
       };
     const response = await fetch(url, requestOptions);
     const json = await response.json();
-    let bondisNear = json[0]
-    let rutaBondisNear=json[1]
+    bondisNear = json[0]
+    rutaBondisNear=json[1]
     for (let k in bondisNear) {
         let bondi = bondisNear[k]
         lat=bondi['status']['position']['lat']
         lon=bondi['status']['position']['lon']
-        nombre=ramales.filter(x=>x['routeId']==rutaBondisNear[k])[0]['shortName']
-        L.circle([lat,lon], {
-            color: 'black',
-            fillColor: 'black',
-            fillOpacity: 0.5,
-            radius: 5
-        }).addTo(map).bindTooltip(nombre);
-    
+        nombre=ramales.filter(x=>x['routeId']==rutaBondisNear[k])[0]['shortName'] 
+        L.marker([lat,lon], {icon: L.divIcon({className: 'my-div-icon' ,html : nombre})}).addTo(map).bindTooltip(nombre);
     }
 
     
