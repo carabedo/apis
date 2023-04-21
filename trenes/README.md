@@ -1,5 +1,19 @@
 # Api Trenes
 
+## Comportamiento de la APP:
+
+cercanas?
+
+horarios/groups (grupo == sentido)
+
+```
+GET /v1/estaciones/271/horarios?fields=results%28desde%28id%2CnombreCorto%2Cllegada%2Csegundos%2Canden%29%2Chasta%28id%2CnombreCorto%2Cllegada%2Csegundos%2Canden%29%2Csalida%2Cservicio%28id%2Cramal%2Ctren%2Cformacion%28id%2Cposicion%29%2Cascendente%2Crealtime%2CtipoServicio%2Cdestino%28nombreCorto%29%29%29&lineas=5&cabeceraFinal=190&limit=3 HTTP/1.1 
+Host: apiarribos.sofse.gob.ar 
+Connection: Keep-Alive 
+Accept-Encoding: gzip 
+User-Agent: okhttp/3.11.0 
+If-None-Match: W/"698-FeBaZJ/fHCOtlMKldBOFpk7lvk4"
+```
 
 ## Endpoints
 
