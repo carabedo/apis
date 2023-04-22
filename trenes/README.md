@@ -2,7 +2,7 @@
 
 ## Comportamiento de la APP:
 
-cercanas?
+cercanas? si
 
 horarios/groups (grupo == sentido)
 
