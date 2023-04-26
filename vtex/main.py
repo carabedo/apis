@@ -147,8 +147,3 @@ def comparar3(producto,num=50):
   df_compare2.columns=['id', 'name', 'precio_dia', 'precio_carrefour','precio_chango']
   return df1,df2,df3,df_compare2
   
-producto=sys.argv[1]
-
-df_comparacion=comparar3(producto)
-
-print(df_comparacion)
