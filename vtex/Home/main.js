@@ -46,7 +46,7 @@ btnBusca.addEventListener('click', async (e) => {
   console.log(productosData);
   for(var key in productosData) {
     var node = document.createElement("li");
-    var textnode = document.createTextNode(productosData[key].name+' dia: '+productosData[key].precio_dia+'$ carrefour: '+productosData[key].precio_carrefour+'$ chango: '+productosData[key].precio_chango);
+    var textnode = document.createTextNode(productosData[key].name+'      @'+productosData[key].list_high +'$');
     node.appendChild(textnode);
     document.getElementById("lista").appendChild(node);
    }
