@@ -18,11 +18,19 @@ Hackeando apps de android podemos obtener los endopoints de algunas apis privada
 
 https://ibotpeaches.github.io/Apktool/install/
 
-* Download apktool from https://ibotpeaches.github.io/Apktool/
-* Unpack apk file: `apktool d app.apk`
-* Modify AndroidManifest.xml by adding `android:networkSecurityConfig="@xml/network_security_config"` attribute to `application` element.
-* Create file /res/xml/network_security_config.xml with following content:
+* Descomprimimos el archivo apk (bajar el apk de la aplicacion de pureapk.com):
+
 ```
+apktool d app.apk
+````
+Esto va a generar una carpeta con todos los archivos de la app.
+
+* Tenemos que modificar el archivo `AndroidManifest.xml, vamos a agregar : `android:networkSecurityConfig="@xml/network_security_config"` como un atributo en el tag `application`. Los tags del archivo xml son como los tags de un archivo HTML.
+
+
+* Luego creamos un archivo en la siguiente ruta: `/res/xml/` que se llame `network_security_config.xml` y agregamos las siguientes lineas:
+
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
     <base-config>
@@ -33,7 +41,10 @@ https://ibotpeaches.github.io/Apktool/install/
     </base-config>
 </network-security-config>
 ```
-* Build patched apk: `apktool b app -o app_patched.apk`
+* Por ultimo reconstruimos el apk: 
+```
+apktool b app -o app_patched.apk
+```
     * error `Resource is not public` see https://github.com/iBotPeaches/Apktool/issues/810
     * If you see error 'android:localeConfig in Manifest' see https://github.com/iBotPeaches/Apktool/issues/2756#issuecomment-1059370741
     * If you see followint error try running `java -jar /home/expert/work/tools/apktool.jar empty-framework-dir --force` or run `b` command with parameter `--use-aapt2`
