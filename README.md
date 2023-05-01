@@ -45,6 +45,15 @@ Esto va a generar una carpeta con todos los archivos de la app.
 ```
 apktool b app -o app_patched.apk
 ```
+
+Errores posibles:
+
+    * Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        ```
+        Increase the java heap size like:
+        java -Xmx4096m -jar apktool.jar
+        java -Xmx4g -jar apktool.jar
+        ```
     * error `Resource is not public` see https://github.com/iBotPeaches/Apktool/issues/810
     * If you see error 'android:localeConfig in Manifest' see https://github.com/iBotPeaches/Apktool/issues/2756#issuecomment-1059370741
     * If you see followint error try running `java -jar /home/expert/work/tools/apktool.jar empty-framework-dir --force` or run `b` command with parameter `--use-aapt2`
