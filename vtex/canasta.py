@@ -17,6 +17,7 @@ data=[]
 for x in prods:
   df=get(x)
   df['date']=date
+  df['id']=df['id'].astype('str')
   df['query']=x
   data.append(df)
   time.sleep(0.2)
