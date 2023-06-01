@@ -15,11 +15,16 @@ date=now.strftime("%d/%m/%y")
 
 data=[]
 for x in prods:
-  df=get(x)
-  df['date']=date
-  df['id']=df['id'].astype('str')
-  df['query']=x
-  data.append(df)
+  print('requesting:',x)
+  try:
+    df=get(x)
+    df['date']=date
+    df['id']=df['id'].astype('str')
+    df['query']=x
+    data.append(df)
+    print('ok')
+  except:
+    print('failed')
   time.sleep(0.2)
 
 data=pd.concat(data)

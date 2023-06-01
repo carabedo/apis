@@ -1,3 +1,4 @@
 vtex/.DS_Store
 .DS_Store
 vtex/test.ipynb
+*.pyc
